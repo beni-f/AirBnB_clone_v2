@@ -3,13 +3,13 @@
 import models
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String
-from sqlalchemy.orm import Relationship
+from sqlalchemy.orm import relationship
 from os import getenv
 
 class State(BaseModel, Base):
     """ State class """
     __tablename__ = 'states'
-    cities = Relationship("City", backref="state", cascade="all, delete")
+    cities = relationship("City", backref="state", cascade="all, delete")
     name = Column(String(128), nullable=False)
 
     if getenv('HBNB_TYPE_STORAGE') != 'db':
