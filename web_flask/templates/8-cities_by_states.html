@@ -4,17 +4,17 @@
     <title>HBNB</title>
 </head>
 <body>
-    <h1>States</h1>
-    <ul>
+    <H1>States</H1>
+    <UL>
         {% for state in states %}
-            <li>State: {{ state.id }}: <b>{{ state.name }}</b>
-                <ul>
+            <LI>State: {{ state.id }}: <B>{{ state.name }}</B>
+                <UL>
                     {% for city in  state.cities %}
-                        <li>{{ city.id }}: <b>{{ city.name }}</b></li>
+                        <LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
                     {% endfor %}
-                </ul>
+                </UL>
             </li>   
         {% endfor %}
-    </ul>
+    </UL>
 </body>
 </html>
